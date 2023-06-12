@@ -1,0 +1,135 @@
+@import url("./utils.css");
+
+* {
+  box-sizing: border-box;
+}
+
+/* Variables for customizing design */
+:root {
+  --ff: "Courier New", Courier, monospace;
+  --fsecondary: Times, serif;
+  --fz: 20px;
+
+  /* Sizing */
+  --container-width: 840px;
+  --card-container-width: 1000px;
+  --modal-with: 600px;
+  --lg-text: 2rem;
+
+  /* Colors */
+  --foreground: #282828;
+  --bg: #fbf1c7;
+  --red: #cc2412;
+  --green: #98971a;
+  --yellow: #d79921;
+  --blue: #458598;
+  --purple: #b16286;
+  --aqua: #689d6a;
+  --orange: #d65d0e;
+  --gray: #7c6f64;
+}
+
+.modal {
+  width: var(--modal-with);
+  padding: 1rem;
+  box-shadow: 10px 10px black;
+  background-color: var(--purple);
+}
+
+.bg-blue {
+  background-color: var(--aqua);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: var(--fz);
+  font-family: var(--ff);
+  color: var(--foreground);
+  background-color: var(--bg);
+  min-height: 100vh;
+}
+
+input,
+textarea,
+button {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: var(--fz);
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--foreground);
+  border-radius: 3px;
+}
+
+.active {
+  color: var(--bg);
+  background-color: var(--foreground);
+}
+
+.container {
+  width: var(--container-width);
+  background-color: var(--blue);
+  margin-top: 5rem;
+  margin-inline: auto;
+  display: flow-root;
+  box-shadow: 10px 10px black;
+}
+
+.card-container {
+  width: var(--card-container-width);
+  margin-top: 5rem;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  background-color: var(--blue);
+  box-shadow: 10px 10px black;
+}
+
+.filters-container {
+  width: 1200px;
+  margin-inline: auto;
+}
+
+.todo-row {
+  border-top: 1px solid var(--foreground);
+}
+
+.todo-row-regular {
+  background-color: var(--blue);
+}
+
+.todo-row-low {
+  background-color: var(--green);
+}
+
+.todo-row-high {
+  background-color: var(--red);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fsecondary);
+}

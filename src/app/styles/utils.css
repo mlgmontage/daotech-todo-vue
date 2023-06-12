@@ -1,0 +1,81 @@
+/* Tailwind style compositinal css utils for styling and development */
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.align-right {
+  margin-left: auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.no-border {
+  border: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Text */
+.center {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* Sizing */
+.w-full {
+  width: 100%;
+}
+
+.text-lg {
+  font-size: var(--lg-text);
+}
+
+/* Spacing */
+.p-1 {
+  padding: 1rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+/* Dev-only */
+.lined-blue {
+  outline: 1px solid blue;
+}
+
+.lined-red {
+  outline: 1px solid red;
+}
+
+.lined-yellow {
+  outline: 1px solid yellow;
+}
