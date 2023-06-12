@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "./HomeView.vue";
+import TodoPage from "./TodoPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "todo",
+    component: TodoPage,
   },
   {
     path: "/about",
