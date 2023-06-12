@@ -10,5 +10,3 @@ import TodoRow from '@/entities/todo/ui/TodoRow.vue'
     <TodoRow />
   </div>
 </template>
-
-
