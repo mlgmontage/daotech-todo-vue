@@ -4,6 +4,7 @@ export const todoModel = {
       { id: 0, text: "wash dishes", completed: false },
       { id: 1, text: "write some code", completed: true },
     ],
+    filter: "all", // "all" | "todo" | "done"
   }),
   mutations: {
     createtodo(state: any, payload: string) {
@@ -14,7 +15,20 @@ export const todoModel = {
       const i = state.todos.findIndex((todo: any) => todo.id === payload);
       state.todos.splice(i, 1);
     },
+    setfilter(state: any, payload: string) {
+      state.filter = payload;
+    },
   },
   actions: {},
-  getters: {},
+  getters: {
+    filteredTodos(state: any) {
+      if (state.filter === "todo") {
+        return state.todos.filter((todo: any) => todo.completed === false);
+      }
+      if (state.filter === "done") {
+        return state.todos.filter((todo: any) => todo.completed === true);
+      }
+      return state.todos;
+    },
+  },
 };

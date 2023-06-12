@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useStore } from 'vuex';
 import RemoveTodo from '@/features/todo/RemoveTodo.vue'
 
-const store = useStore()
-const todos = computed(() => store.state.todo.todos)
+type Props = {
+  id: number
+  text: string
+}
+
+defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex gap-1 p-1 space-between" v-for="todo in todos" :key="todo.id">
-    <input type="checkbox" :checked="todo.completed">
+  <div class="flex gap-1 p-1 space-between">
+    <!-- <input type="checkbox" :checked="todo.completed"> -->
     <div class="flex-1">
-      {{ todo.text }}
+      {{ $props.text }}
     </div>
-    <RemoveTodo :id="todo.id" />
+    <RemoveTodo :id="$props.id" />
   </div>
 </template>
