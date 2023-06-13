@@ -7,13 +7,17 @@ import CreateTodo from '@/features/todo/CreateTodo.vue'
 import FilterTodo from '@/features/todo/FilterTodo.vue'
 import TodoCount from '@/features/todo/TodoCount.vue'
 import SwitchMode from '@/features/todo/SwitchMode.vue'
+import TodoDetails from '@/modals/TodoDetails.vue'
 
 const store = useStore()
 const todos = computed(() => store.getters.filteredTodos)
 const viewmode = computed(() => store.state.todo.viewmode)
+const showDetails = computed(() => store.state.ui.details.show)
 </script>
 
 <template>
+  <TodoDetails v-show="showDetails" />
+
   <div class="bg-blue p-1">
     <div class="filters-container flex gap-1 items-center">
       <FilterTodo />

@@ -30,7 +30,7 @@ export const todoModel = {
   },
   actions: {},
   getters: {
-    filteredTodos(state: any) {
+    filteredTodos: (state: any) => {
       if (state.filter === "todo") {
         return state.todos.filter((todo: any) => todo.completed === false);
       }
@@ -39,7 +39,7 @@ export const todoModel = {
       }
       return state.todos;
     },
-    countTodos(state: any) {
+    countTodos: (state: any) => {
       const todo = state.todos.filter(
         (todo: any) => todo.completed === false
       ).length;
@@ -48,6 +48,10 @@ export const todoModel = {
       ).length;
 
       return { todo, done };
+    },
+    getTodo: (state: any) => (id?: number) => {
+      if (!id === undefined) return undefined;
+      return state.todos.find((todo: any) => todo.id == id);
     },
   },
 };
