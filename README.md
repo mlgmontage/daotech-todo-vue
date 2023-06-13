@@ -10,7 +10,7 @@ This is part of _advent of todo_ serie where I implement same app with different
 
 - [x] Create todo
 - [x] Todo list
-- [ ] Remove todos
+- [x] Remove todos
 - [x] Use state manager
 
 ## Junior+
@@ -19,11 +19,11 @@ This is part of _advent of todo_ serie where I implement same app with different
 - [ ] Toggling todo `completed/uncompleted`
 - [x] Feature-sliced design
 - [ ] Add view-mode `table/cards`
-- [ ] Counter for `completed/uncompleted`
+- [x] Counter for `completed/uncompleted`
 
 ## Middle
 
-- [ ] Filtering todo by `completed/uncompleted`
+- [x] Filtering todo by `completed/uncompleted`
 - [ ] Pagination
 - [ ] Todo details
   - [ ] Importance level

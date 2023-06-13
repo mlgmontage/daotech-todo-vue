@@ -5,11 +5,6 @@ import { computed, onMounted } from 'vue'
 const store = useStore()
 const filter = computed(() => store.state.todo.filter)
 
-onMounted(() => {
-  console.log(filter.value);
-
-})
-
 </script>
 
 <template>

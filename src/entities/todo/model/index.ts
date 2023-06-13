@@ -30,5 +30,15 @@ export const todoModel = {
       }
       return state.todos;
     },
+    countTodos(state: any) {
+      const todo = state.todos.filter(
+        (todo: any) => todo.completed === false
+      ).length;
+      const done = state.todos.filter(
+        (todo: any) => todo.completed === true
+      ).length;
+
+      return { todo, done };
+    },
   },
 };
