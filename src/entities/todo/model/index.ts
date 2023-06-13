@@ -15,6 +15,10 @@ export const todoModel = {
       const i = state.todos.findIndex((todo: any) => todo.id === payload);
       state.todos.splice(i, 1);
     },
+    toggletodo(state: any, payload: number) {
+      const i = state.todos.findIndex((todo: any) => todo.id === payload);
+      state.todos[i].completed = !state.todos[i].completed;
+    },
     setfilter(state: any, payload: string) {
       state.filter = payload;
     },
