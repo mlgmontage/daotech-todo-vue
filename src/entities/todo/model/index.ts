@@ -1,8 +1,9 @@
 export const todoModel = {
   state: () => ({
     todos: [
-      { id: 0, text: "wash dishes", completed: false },
-      { id: 1, text: "write some code", completed: true },
+      { id: 0, text: "wash dishes", completed: false, level: "low" },
+      { id: 1, text: "write some code", completed: true, level: "regular" },
+      { id: 2, text: "watch YT", completed: true, level: "high" },
     ],
     filter: "all", // "all" | "todo" | "done"
     viewmode: "list", // "list" | "card"

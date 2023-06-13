@@ -11,7 +11,6 @@ import SwitchMode from '@/features/todo/SwitchMode.vue'
 const store = useStore()
 const todos = computed(() => store.getters.filteredTodos)
 const viewmode = computed(() => store.state.todo.viewmode)
-
 </script>
 
 <template>
@@ -26,7 +25,7 @@ const viewmode = computed(() => store.state.todo.viewmode)
   <div v-show="viewmode === 'list'" class="container">
     <h1 class="center">TODO</h1>
     <CreateTodo />
-    <TodoRow v-for="todo in todos" :id="todo.id" :text="todo.text" :key="todo.id" />
+    <TodoRow v-for="todo in todos" :id="todo.id" :text="todo.text" :level="todo.level" :key="todo.id" />
   </div>
 
   <div v-show="viewmode === 'card'" class="card-container">

@@ -18,14 +18,14 @@ This is part of _advent of todo_ serie where I implement same app with different
 - [ ] Character limit for todo
 - [x] Toggling todo `completed/uncompleted`
 - [x] Feature-sliced design
-- [ ] Add view-mode `table/cards`
+- [x] Add view-mode `table/cards`
 - [x] Counter for `completed/uncompleted`
 
 ## Middle
 
 - [x] Filtering todo by `completed/uncompleted`
-- [ ] Todo details
-  - [ ] Importance level
+- [x] Todo details
+  - [x] Importance level
   - [ ] Description
   - [ ] End date
   - [ ] Start date (readonly)
