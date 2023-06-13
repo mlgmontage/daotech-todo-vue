@@ -16,7 +16,7 @@ This is part of _advent of todo_ serie where I implement same app with different
 ## Junior+
 
 - [ ] Character limit for todo
-- [ ] Toggling todo `completed/uncompleted`
+- [x] Toggling todo `completed/uncompleted`
 - [x] Feature-sliced design
 - [ ] Add view-mode `table/cards`
 - [x] Counter for `completed/uncompleted`
@@ -24,7 +24,6 @@ This is part of _advent of todo_ serie where I implement same app with different
 ## Middle
 
 - [x] Filtering todo by `completed/uncompleted`
-- [ ] Pagination
 - [ ] Todo details
   - [ ] Importance level
   - [ ] Description

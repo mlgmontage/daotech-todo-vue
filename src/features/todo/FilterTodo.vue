@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useStore } from 'vuex';
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 
 const store = useStore()
 const filter = computed(() => store.state.todo.filter)

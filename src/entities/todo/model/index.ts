@@ -5,6 +5,7 @@ export const todoModel = {
       { id: 1, text: "write some code", completed: true },
     ],
     filter: "all", // "all" | "todo" | "done"
+    viewmode: "list", // "list" | "card"
   }),
   mutations: {
     createtodo(state: any, payload: string) {
@@ -21,6 +22,9 @@ export const todoModel = {
     },
     setfilter(state: any, payload: string) {
       state.filter = payload;
+    },
+    setviewmode(state: any, payload: string) {
+      state.viewmode = payload;
     },
   },
   actions: {},
